@@ -6,7 +6,8 @@ angular.module('shortly.services', [])
     get: function() {
       return $http.get("/api/links");
     },
-    post: function(link) {
+    post: function(link) { 
+      console.log(link);
       return $http.post("/api/links", link);
     }
   }
