@@ -1,5 +1,23 @@
 <div id='container'>
 <!-- Your code here -->
+  <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a href='#/signin' class='logout'>Logout</a></li>
+    </ul>
+  </div>
+
+  <div class="creator">
+    <form name="userForm" ng-submit="addLink()" novalidate>
+      <input class='text' required type='url' ng-model="link.url" name='url' ng-class="{'has-error': userForm.url.$invalid && !userForm.url.$pristine}">
+      <input type='submit' ng-disabled="userForm.$invalid" value='Shorten'>
+      <p ng-show="!userForm.url.$error.required && userForm.url.$invalid && !userForm.url.$pristine" class="help-block">Not a valid Url</p>
+      <p ng-show="userForm.url.$error.required && !userForm.url.$pristine" class="help-block">Url required</p>
+    </form>
+    <!-- <img class='spinner' src='assets/spiffygif_46x46.gif'> -->
+    <div class='message'></div>
+  </div>
 
 </div>
 

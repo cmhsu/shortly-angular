@@ -6,10 +6,10 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function() {
     Links.post($scope.link)
       .success(function() {
-
+        $location.path('/links')    
       })
       .error(function() {
-
+            
       });
   };  
 });
