@@ -8,7 +8,9 @@
     </ul>
   </div>
 
-  <div ng-repeat="link in data.links" class="link"> 
+  <input type="text" ng-model="query">
+
+  <div ng-repeat="link in data.links | filter:query | orderBy:'-visits'" class="link">
     <img src='assets/redirect_icon.png'/>
     <div class='info'>
       <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
