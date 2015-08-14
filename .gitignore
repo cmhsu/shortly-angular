@@ -3,6 +3,7 @@
 .LSOverride
 azure.err
 iisnode.yml
+.idea
 
 # Icon must ends with two \r.
 Icon

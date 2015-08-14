@@ -13,7 +13,6 @@ angular.module('shortly.links', [])
 
   $scope.query = '';
 
-
   $scope.search = function (item){
     if( item.title.toLowerCase().indexOf($scope.query.toLowerCase()) >= 0 
       || item.code.toLowerCase().indexOf($scope.query.toLowerCase()) >= 0
@@ -23,8 +22,6 @@ angular.module('shortly.links', [])
     }
     return false;
    };
-
-
 
 
 
